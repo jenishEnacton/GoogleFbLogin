@@ -141,9 +141,9 @@ export default function SignIn({navigation}) {
         {user ? (
           <View style={styles.datacontainer}>
             <Image source={{uri: user?.photo}} style={styles.userphoto} />
-            <Text style={styles.button}>{user?.id}</Text>
-            <Text style={styles.button}>{user?.givenName}</Text>
-            <Text style={styles.button}>{user?.email}</Text>
+            <Text style={styles.userdetail}>{user?.id}</Text>
+            <Text style={styles.userdetail}>{user?.givenName}</Text>
+            <Text style={styles.userdetail}>{user?.email}</Text>
           </View>
         ) : null}
       </View>
@@ -155,13 +155,13 @@ export default function SignIn({navigation}) {
 const styles = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
   },
   title: {
     fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#000',
+    color: '#fff',
     marginTop: 10,
   },
   innerview: {
@@ -208,9 +208,10 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
   },
-  userInfo: {
-    fontSize: 16,
-    marginVertical: 16,
-    color: '#000',
+  userdetail: {
+    fontSize: 20,
+    color: '#fff',
+    textAlign: 'center',
+    marginVertical: 5,
   },
 });
